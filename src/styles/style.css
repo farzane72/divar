@@ -1,3 +1,16 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+
+@font-face {
+    font-family:Vazirmatn;
+    src: 
+    url("./fonts/Vazirmatn-Medium.eot"), url("./fonts/Vazirmatn-Medium.woff"),
+      url("./fonts/Vazirmatn-Medium.woff2 format('woff2')"),
+      url("./fonts/Vazirmatn-Thin.ttf"), url("./fonts/Vazirmatn-Light.ttf"),
+      url("./fonts/Vazirmatn-Thin.woff2"), url("./fonts/Vazirmatn-Light.woff2");
+    font-weight: 100;
+    font-style: normal;
+    font-display: swap;
+  }

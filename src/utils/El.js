@@ -5,7 +5,7 @@ const El = ({ element,child,restAttrs, ...rest }) => {
     el[key] = rest[key];
   }
   for (const key in restAttrs) {
-    setAttribute(key, restAttrs[key])
+   el.setAttribute(key, restAttrs[key])
   }
 
   if (child && Array.isArray(child)) {

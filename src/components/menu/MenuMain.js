@@ -1,14 +1,14 @@
 import El from "../../utils/El";
 import linkMenu from "./linkMenu";
 import SubMenu from "./SubMenu";
-import {  testMenu } from "./OpenMainMenu";
+import { testMenu } from ".";
 
 export default function MenuMain() {
   return El({
     element: "div",
     id: "menuMain",
     className:
-      " w-[1200px] min-h-[500px] max-h-[520px] bg-white rounded flex  p-4 absolute top-14 right-4 z-20 hidden  ",
+      "lg:w-[800px] xl:w-[1200px] min-h-[500px] max-h-[520px] bg-white rounded flex  p-4 absolute top-14 right-4 z-20 hidden  ",
     child: [
       El({
         element: "div",
@@ -19,18 +19,18 @@ export default function MenuMain() {
             className:
               " w-[200px]  text-slate-400 hover:bg-stone-100 rounded mb-2",
             onclick(e) {
-                        e.preventDefault()
-                        let menuMain=document.querySelector('#menuMain')
-                        let idBgMain=document.getElementById('BgBody')
-                        menuMain.classList.add('hidden')
-                        idBgMain.classList.add("hidden");  
+              e.preventDefault();
+              let menuMain = document.querySelector("#menuMain");
+              let idBgMain = document.getElementById("BgBody");
+              menuMain.classList.add("hidden");
+              idBgMain.classList.add("hidden");
             },
             child: linkMenu({
               classIcon1: "fa fa-angle-right",
               title: "همه آگهی ها",
               classIcon2: "",
               classMore: "border rounded",
-             // id:'btnMainMenu'
+              // id:'btnMainMenu'
             }),
           }),
 
@@ -38,19 +38,18 @@ export default function MenuMain() {
             element: "div",
             className:
               " w-[200px]  text-slate-400 hover:bg-stone-100 rounded mb-2",
-              id:'active-item',
-              onmouseover(e) {
-              e.preventDefault()
+            id: "active-item",
+            onmouseover(e) {
+              e.preventDefault();
               testMenu();
-              document.getElementById('menuAmlak').classList.toggle('hidden')
-             // console.log(e.target)
+              document.getElementById("menuAmlak").classList.toggle("hidden");
+              // console.log(e.target)
             },
             child: [
               linkMenu({
                 classIcon1: "fa fa-home",
                 title: "املاک",
                 classIcon2: "fa fa-angle-left",
-                
               }),
               // El({
               //     element:"div",
@@ -78,12 +77,12 @@ export default function MenuMain() {
             element: "div",
             className:
               " w-[200px]  text-slate-400 hover:bg-stone-100 rounded mb-2 item-menu",
-              onmouseover(e) {
-                e.preventDefault()
-                testMenu();
-                document.getElementById('menuKhodro').classList.toggle('hidden')
-               // console.log(e.target)
-              },
+            onmouseover(e) {
+              e.preventDefault();
+              testMenu();
+              document.getElementById("menuKhodro").classList.toggle("hidden");
+              // console.log(e.target)
+            },
             child: linkMenu({
               classIcon1: "fa fa-car",
               title: "وسایل نقلیه",
@@ -94,11 +93,13 @@ export default function MenuMain() {
             element: "div",
             className:
               " w-[200px]  text-slate-400 hover:bg-stone-100 rounded mb-2 item-menu",
-              onmouseover(e) {
-                testMenu();
-                e.preventDefault()
-                document.getElementById('kalayeDigital').classList.toggle('hidden')
-              },
+            onmouseover(e) {
+              testMenu();
+              e.preventDefault();
+              document
+                .getElementById("kalayeDigital")
+                .classList.toggle("hidden");
+            },
             child: linkMenu({
               classIcon1: "fa fa-mobile",
               title: "کالای دیجیتال",
@@ -109,11 +110,11 @@ export default function MenuMain() {
             element: "div",
             className:
               " w-[200px]  text-slate-400 hover:bg-stone-100 rounded mb-2 item-menu",
-              onmouseover(e) {
-                e.preventDefault()
-                testMenu();
-                document.getElementById('Ashpazkhane').classList.toggle('hidden')
-              },
+            onmouseover(e) {
+              e.preventDefault();
+              testMenu();
+              document.getElementById("Ashpazkhane").classList.toggle("hidden");
+            },
             child: linkMenu({
               classIcon1: "fa fa-cutlery ",
               title: "خانه و آشپزخانه",
@@ -124,11 +125,11 @@ export default function MenuMain() {
             element: "div",
             className:
               " w-[200px]  text-slate-400 hover:bg-stone-100 rounded mb-2 item-menu",
-              onmouseover(e) {
-                e.preventDefault()
-                testMenu();
-                document.getElementById('khadamat').classList.toggle('hidden')
-              },
+            onmouseover(e) {
+              e.preventDefault();
+              testMenu();
+              document.getElementById("khadamat").classList.toggle("hidden");
+            },
             child: linkMenu({
               classIcon1: "fa fa-wrench ",
               title: "خدمات",
@@ -139,11 +140,11 @@ export default function MenuMain() {
             element: "div",
             className:
               " w-[200px]  text-slate-400 hover:bg-stone-100 rounded mb-2 item-menu",
-              onmouseover(e) {
-                e.preventDefault()
-                testMenu();
-                document.getElementById('Tafrih').classList.toggle('hidden')
-              },
+            onmouseover(e) {
+              e.preventDefault();
+              testMenu();
+              document.getElementById("Tafrih").classList.toggle("hidden");
+            },
             child: linkMenu({
               classIcon1: "fa fa-futbol-o",
               title: "تفریحات و سرگرمی",
@@ -154,12 +155,12 @@ export default function MenuMain() {
             element: "div",
             className:
               " w-[200px]  text-slate-400 hover:bg-stone-100 rounded mb-2",
-              onmouseover(e) {
-                e.preventDefault()
-                testMenu();
-                document.getElementById('Ejtemaii').classList.toggle('hidden')
-              },
-            
+            onmouseover(e) {
+              e.preventDefault();
+              testMenu();
+              document.getElementById("Ejtemaii").classList.toggle("hidden");
+            },
+
             child: linkMenu({
               classIcon1: "fa fa-users",
               title: "اجتماعی",
@@ -168,15 +169,15 @@ export default function MenuMain() {
           }),
         ],
       }),
-      
+
       El({
         element: "div",
         className: "mr-2 flex  w-full  item-subMenu",
-        id:'menuAmlak',
+        id: "menuAmlak",
         child: [
           El({
             element: "div",
-            className: "flex flex-col flex-wrap  h-full w-full ",
+            className: "flex flex-col flex-wrap  h-full w-full overflow-auto",
             id: "",
             child: [
               SubMenu({
@@ -217,8 +218,7 @@ export default function MenuMain() {
             child: [
               El({
                 element: "div",
-                className:
-                  "w-[280px] h-[200px] mb-16 ",
+                className: "w-[280px] h-[200px] mb-16 ",
                 child: [
                   El({
                     element: "img",
@@ -247,11 +247,11 @@ export default function MenuMain() {
       El({
         element: "div",
         className: "mr-2 flex  w-full hidden item-subMenu",
-        id:'menuKhodro',
+        id: "menuKhodro",
         child: [
           El({
             element: "div",
-            className: "flex flex-col flex-wrap  h-full w-full ",
+            className: "flex flex-col flex-wrap  h-full w-full overflow-auto ",
             id: "",
             child: [
               SubMenu({
@@ -263,16 +263,13 @@ export default function MenuMain() {
               }),
               SubMenu({
                 title: "موتور سیکلت",
-               
               }),
               SubMenu({
-                title:'قطعات یدکی و لوازم جانبی',
-               
+                title: "قطعات یدکی و لوازم جانبی",
               }),
               SubMenu({
-                title: 'قایق و سایر وسایل نقلیه',
+                title: "قایق و سایر وسایل نقلیه",
               }),
-
             ],
           }),
 
@@ -282,8 +279,7 @@ export default function MenuMain() {
             child: [
               El({
                 element: "div",
-                className:
-                  "w-[280px] h-[200px] mb-16 ",
+                className: "w-[280px] h-[200px] mb-16 ",
                 child: [
                   El({
                     element: "img",
@@ -312,11 +308,11 @@ export default function MenuMain() {
       El({
         element: "div",
         className: "mr-2 flex  w-full hidden item-subMenu",
-        id:'kalayeDigital',
+        id: "kalayeDigital",
         child: [
           El({
             element: "div",
-            className: "flex flex-col flex-wrap  h-full w-full ",
+            className: "flex flex-col flex-wrap  h-full w-full overflow-auto ",
             id: "",
             child: [
               SubMenu({
@@ -334,13 +330,10 @@ export default function MenuMain() {
                 title: "صوتی و تصویری",
                 li1: "فیلم و موسیقی",
                 li2: " دوربین عکاسی",
-                
               }),
               SubMenu({
-               title:"تلفن رو میزی"
-               
+                title: "تلفن رو میزی",
               }),
-              
             ],
           }),
 
@@ -350,8 +343,7 @@ export default function MenuMain() {
             child: [
               El({
                 element: "div",
-                className:
-                  "w-[280px] h-[200px] mb-16 ",
+                className: "w-[280px] h-[200px] mb-16 ",
                 child: [
                   El({
                     element: "img",
@@ -379,18 +371,17 @@ export default function MenuMain() {
       El({
         element: "div",
         className: "mr-2 flex  w-full hidden item-subMenu",
-        id:'Ashpazkhane',
+        id: "Ashpazkhane",
         child: [
           El({
             element: "div",
-            className: "flex flex-col flex-wrap  h-full w-full ",
+            className: "flex flex-col flex-wrap  h-full w-full overflow-auto ",
             id: "",
             child: [
               SubMenu({
                 title: "لوازم خانگی برقی",
                 li1: "یخچال و فریزر",
                 li2: "هود",
-               
               }),
               SubMenu({
                 title: "ظروف و لوازم آشپزخانه",
@@ -399,14 +390,11 @@ export default function MenuMain() {
               }),
               SubMenu({
                 title: "خوردنی و آشامیدنی",
-                
               }),
               SubMenu({
                 title: "خیاطی",
-                li1:"چرخ خیاطی"
-               
+                li1: "چرخ خیاطی",
               }),
-              
             ],
           }),
 
@@ -416,8 +404,7 @@ export default function MenuMain() {
             child: [
               El({
                 element: "div",
-                className:
-                  "w-[280px] h-[200px] mb-16 ",
+                className: "w-[280px] h-[200px] mb-16 ",
                 child: [
                   El({
                     element: "img",
@@ -445,26 +432,22 @@ export default function MenuMain() {
       El({
         element: "div",
         className: "mr-2 flex  w-full hidden item-subMenu",
-        id:'khadamat',
+        id: "khadamat",
         child: [
           El({
             element: "div",
-            className: "flex flex-col flex-wrap  h-full w-full ",
+            className: "flex flex-col flex-wrap  h-full w-full overflow-auto ",
             id: "",
             child: [
               SubMenu({
                 title: "موتور وماشین",
-                
               }),
               SubMenu({
                 title: "پذیرایی مراسم",
               }),
               SubMenu({
                 title: "حمل و نقل",
-               
               }),
-              
-              
             ],
           }),
 
@@ -474,8 +457,7 @@ export default function MenuMain() {
             child: [
               El({
                 element: "div",
-                className:
-                  "w-[280px] h-[200px] mb-16 ",
+                className: "w-[280px] h-[200px] mb-16 ",
                 child: [
                   El({
                     element: "img",
@@ -504,26 +486,22 @@ export default function MenuMain() {
       El({
         element: "div",
         className: "mr-2 flex  w-full hidden item-subMenu",
-        id:'Tafrih',
+        id: "Tafrih",
         child: [
           El({
             element: "div",
-            className: "flex flex-col flex-wrap  h-full w-full ",
+            className: "flex flex-col flex-wrap  h-full w-full overflow-auto",
             id: "",
             child: [
               SubMenu({
                 title: "بلیط",
-                
               }),
               SubMenu({
                 title: "تور و چارتز",
               }),
               SubMenu({
                 title: "کتاب و مجله",
-               
               }),
-              
-              
             ],
           }),
 
@@ -533,8 +511,7 @@ export default function MenuMain() {
             child: [
               El({
                 element: "div",
-                className:
-                  "w-[280px] h-[200px] mb-16 ",
+                className: "w-[280px] h-[200px] mb-16 ",
                 child: [
                   El({
                     element: "img",
@@ -562,8 +539,8 @@ export default function MenuMain() {
 
       El({
         element: "div",
-        className: "mr-2 flex  w-full hidden item-subMenu",
-        id:'Ejtemaii',
+        className: "mr-2 flex  w-full hidden item-subMenu overflow-auto",
+        id: "Ejtemaii",
         child: [
           El({
             element: "div",
@@ -572,14 +549,10 @@ export default function MenuMain() {
             child: [
               SubMenu({
                 title: "رویداد",
-                
               }),
               SubMenu({
-                title: 'داوطلبانه'
+                title: "داوطلبانه",
               }),
-              
-              
-              
             ],
           }),
 
@@ -589,8 +562,7 @@ export default function MenuMain() {
             child: [
               El({
                 element: "div",
-                className:
-                  "w-[280px] h-[200px] mb-16 ",
+                className: "w-[280px] h-[200px] mb-16 ",
                 child: [
                   El({
                     element: "img",
@@ -615,7 +587,6 @@ export default function MenuMain() {
           // }),
         ],
       }),
-      
     ],
   });
 }

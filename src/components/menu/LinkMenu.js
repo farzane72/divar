@@ -8,9 +8,9 @@ export default function linkMenu({classIcon1='',title,classIcon2='',href='',clas
             href:href,
             id:id,
             onclick(e){
-            functionItem(e)
+            functionItem(e,id)
             },
-            className:`flex justify-between   w-full items-center p-2 ${classMore}`,
+            className:`flex justify-between    items-center p-2 ${classMore}`,
             child:[
                 El({
                     element:'div',

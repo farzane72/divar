@@ -5,7 +5,7 @@ export default function Card({title,situation,price,address,src}){
     return(
         El({
             element:'div',
-            className:'flex border rounded-md p-2 gap-4 h-[180px]',
+            className:'flex justify-between border rounded-md p-2 gap-4 h-[180px]',
             child:[
                 El({
                     element:'div',

@@ -4,7 +4,7 @@ import Card from "../../components/card/card";
 function Home() {
   return El({
     element: "div",
-    className: "grid grid-cols-3 gap-2",
+    className: "grid  col-span-12 mx-auto sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-2 xl:grid-cols-3 gap-2",
     child: [
     //   El({
     //     element: "div",

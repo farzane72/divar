@@ -3,7 +3,7 @@ import El from "../../utils/El";
 export default function Search() {
   return El({
     element: "div",
-    className: "relative flex-1 w-[400px]",
+    className: "relative flex-1 w-[400px] hidden md:block",
     child: [
       El({
         element: "input",
